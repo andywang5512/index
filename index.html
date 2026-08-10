@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -34,7 +34,6 @@
             }
           },
           fontFamily: {
-            cinzel: ['Cinzel', 'serif'],
             montserrat: ['Montserrat', 'sans-serif'],
             inter: ['Inter', 'sans-serif'],
           }
@@ -51,7 +50,7 @@
       font-family: 'Montserrat', sans-serif;
     }
     .company-name {
-      font-family: 'Cinzel', serif;
+      font-family: 'Montserrat', sans-serif;
     }
     .hero-bg {
       background-image: linear-gradient(rgba(32, 62, 150, 0.78), rgba(14, 26, 64, 0.85)),
@@ -66,15 +65,15 @@
   <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-slate-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20 lg:h-24">
-        <!-- Logo + Company Name -->
-        <a href="/" class="flex items-center gap-3 shrink-0">
-          <img src="logo.png" alt="Evertrust" class="h-12 lg:h-16 w-auto object-contain" />
-          <div class="hidden sm:block leading-tight">
-            <div class="company-name text-sm lg:text-base font-semibold text-primary-900 tracking-wide">
-              Evertrust International Logistics Co., Ltd.
-            </div>
-          </div>
-        </a>
+    <!-- Logo + Company Name -->
+<a href="/" class="flex items-center gap-3 shrink-0">
+  <img src="logo.png" alt="Evertrust" class="h-12 lg:h-16 w-auto object-contain" />
+  <div class="hidden sm:block leading-tight">
+    <div class="company-name text-base lg:text-lg font-semibold text-primary-900 tracking-wide">
+      Evertrust International Logistics Co., Ltd.
+    </div>
+  </div>
+</a>
         <!-- Desktop Nav -->
         <nav class="hidden lg:flex items-center gap-12">
           <a href="#services" class="text-base font-semibold text-slate-700 hover:text-primary-600 transition font-montserrat">Services</a>
