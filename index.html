@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Evertrust International Logistics Co., Ltd. | 青岛德信致远国际物流有限公司</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -26,6 +32,11 @@
               500: '#f97316',
               600: '#ea580c',
             }
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            montserrat: ['Montserrat', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
           }
         }
       }
@@ -33,6 +44,15 @@
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .company-name {
+      font-family: 'Cinzel', serif;
+    }
     .hero-bg {
       background-image: linear-gradient(rgba(32, 62, 150, 0.78), rgba(14, 26, 64, 0.85)),
         url('images/hero-bg.jpg');
@@ -41,20 +61,25 @@
     }
   </style>
 </head>
-<body class="bg-white text-slate-800 font-sans antialiased">
+<body class="bg-white text-slate-800 antialiased">
   <!-- ========== HEADER ========== -->
   <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-slate-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20 lg:h-24">
-        <a href="/" class="flex items-center gap-2.5 shrink-0">
+        <!-- Logo + Company Name -->
+        <a href="/" class="flex items-center gap-3 shrink-0">
           <img src="logo.png" alt="Evertrust" class="h-12 lg:h-16 w-auto object-contain" />
+          <div class="hidden sm:block leading-tight">
+            <div class="company-name text-sm lg:text-base font-semibold text-primary-900 tracking-wide">
+              Evertrust International Logistics Co., Ltd.
+            </div>
+          </div>
         </a>
-        <!-- Desktop Nav - 间距加大 + 字体加大加粗 -->
+        <!-- Desktop Nav -->
         <nav class="hidden lg:flex items-center gap-12">
-          <a href="#services" class="text-base font-semibold text-slate-700 hover:text-primary-600 transition">Services</a>
-          <a href="#about" class="text-base font-semibold text-slate-700 hover:text-primary-600 transition">About</a>
-          <a href="#news" class="text-base font-semibold text-slate-700 hover:text-primary-600 transition">Insights</a>
-          <a href="#contact" class="text-base font-semibold text-slate-700 hover:text-primary-600 transition">Contact</a>
+          <a href="#services" class="text-base font-semibold text-slate-700 hover:text-primary-600 transition font-montserrat">Services</a>
+          <a href="#about" class="text-base font-semibold text-slate-700 hover:text-primary-600 transition font-montserrat">About</a>
+          <a href="#contact" class="text-base font-semibold text-slate-700 hover:text-primary-600 transition font-montserrat">Contact</a>
         </nav>
         <div class="flex items-center gap-3">
           <div class="hidden sm:flex items-center gap-1 text-sm border border-slate-200 rounded-full px-3 py-1.5">
@@ -65,7 +90,7 @@
           <a href="#track" class="hidden md:inline-flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-primary-600">
             <i class="fas fa-search-location"></i> Track
           </a>
-          <a href="#quote" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition shadow-sm">
+          <a href="#quote" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition shadow-sm font-montserrat">
             Get a Quote
           </a>
           <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-600">
@@ -74,14 +99,14 @@
         </div>
       </div>
     </div>
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100">
       <div class="px-4 py-4 space-y-3">
-        <a href="#services" class="block py-2 text-base font-semibold text-slate-700">Services</a>
-        <a href="#about" class="block py-2 text-base font-semibold text-slate-700">About</a>
-        <a href="#news" class="block py-2 text-base font-semibold text-slate-700">Insights</a>
-        <a href="#contact" class="block py-2 text-base font-semibold text-slate-700">Contact</a>
-        <a href="#track" class="block py-2 text-base font-semibold text-slate-700">Track Shipment</a>
-        <a href="#quote" class="block py-2.5 bg-primary-600 text-white text-center rounded-lg font-semibold">Get a Quote</a>
+        <a href="#services" class="block py-2 text-base font-semibold text-slate-700 font-montserrat">Services</a>
+        <a href="#about" class="block py-2 text-base font-semibold text-slate-700 font-montserrat">About</a>
+        <a href="#contact" class="block py-2 text-base font-semibold text-slate-700 font-montserrat">Contact</a>
+        <a href="#track" class="block py-2 text-base font-semibold text-slate-700 font-montserrat">Track Shipment</a>
+        <a href="#quote" class="block py-2.5 bg-primary-600 text-white text-center rounded-lg font-semibold font-montserrat">Get a Quote</a>
       </div>
     </div>
   </header>
@@ -92,9 +117,9 @@
       <div class="max-w-3xl">
         <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur text-white/90 text-sm px-4 py-1.5 rounded-full mb-6 border border-white/20">
           <span class="w-2 h-2 bg-accent-500 rounded-full animate-pulse"></span>
-          Evertrust International Logistics Co., Ltd.
+          <span class="company-name">Evertrust International Logistics Co., Ltd.</span>
         </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-6 font-montserrat">
           Connecting the World<br />
           <span class="text-primary-200">Efficiently · Reliably · Professionally</span>
         </h1>
@@ -102,11 +127,11 @@
           Evertrust International Logistics Co., Ltd. provides end-to-end ocean, air, rail and road logistics solutions, serving major global trade markets.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#quote" class="inline-flex items-center justify-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-4 rounded-lg transition shadow-lg shadow-orange-500/25">
+          <a href="#quote" class="inline-flex items-center justify-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-4 rounded-lg transition shadow-lg shadow-orange-500/25 font-montserrat">
             Get a Quote
             <i class="fas fa-arrow-right text-sm"></i>
           </a>
-          <a href="#track" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold px-8 py-4 rounded-lg border border-white/30 transition">
+          <a href="#track" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold px-8 py-4 rounded-lg border border-white/30 transition font-montserrat">
             <i class="fas fa-search-location"></i>
             Track Shipment
           </a>
@@ -119,8 +144,8 @@
   <section id="services" class="py-20 lg:py-28 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <p class="text-sm font-semibold text-primary-600 uppercase tracking-wider mb-3">Our Core Services</p>
-        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Ocean · Air · Rail · Road</h2>
+        <p class="text-sm font-semibold text-primary-600 uppercase tracking-wider mb-3 font-montserrat">Our Core Services</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 font-montserrat">Ocean · Air · Rail · Road</h2>
         <p class="text-lg text-slate-600">Four powerful transportation modes, seamlessly integrated to move your cargo anywhere in the world.</p>
       </div>
 
@@ -129,34 +154,34 @@
           <div class="w-16 h-16 bg-primary-50 text-primary-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-primary-600 group-hover:text-white transition">
             <i class="fas fa-ship text-3xl"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Ocean Freight</h3>
+          <h3 class="text-xl font-bold text-slate-900 mb-3 font-montserrat">Ocean Freight</h3>
           <p class="text-slate-600 text-sm leading-relaxed">FCL & LCL solutions across major global trade lanes with competitive rates and reliable schedules.</p>
         </div>
         <div class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-primary-200 text-center">
           <div class="w-16 h-16 bg-primary-50 text-primary-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-primary-600 group-hover:text-white transition">
             <i class="fas fa-plane text-3xl"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Air Freight</h3>
+          <h3 class="text-xl font-bold text-slate-900 mb-3 font-montserrat">Air Freight</h3>
           <p class="text-slate-600 text-sm leading-relaxed">Time-critical and high-value shipments with priority handling and global airport coverage.</p>
         </div>
         <div class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-primary-200 text-center">
           <div class="w-16 h-16 bg-primary-50 text-primary-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-primary-600 group-hover:text-white transition">
             <i class="fas fa-train text-3xl"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Rail Freight</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">China-Europe Railway Express and sea-rail intermodal solutions.</p>
+          <h3 class="text-xl font-bold text-slate-900 mb-3 font-montserrat">Rail Freight</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">China-Europe Railway Express (中欧班列) and sea-rail intermodal solutions, connecting inland hubs with major ports for efficient long-haul transport.</p>
         </div>
         <div class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-primary-200 text-center">
           <div class="w-16 h-16 bg-primary-50 text-primary-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-primary-600 group-hover:text-white transition">
             <i class="fas fa-truck text-3xl"></i>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Road Freight</h3>
+          <h3 class="text-xl font-bold text-slate-900 mb-3 font-montserrat">Road Freight</h3>
           <p class="text-slate-600 text-sm leading-relaxed">Domestic and cross-border trucking with flexible last-mile delivery across key markets.</p>
         </div>
       </div>
 
       <div class="text-center mb-10">
-        <h3 class="text-xl font-bold text-slate-900 mb-2">Supporting Services</h3>
+        <h3 class="text-xl font-bold text-slate-900 mb-2 font-montserrat">Supporting Services</h3>
         <p class="text-slate-600">Complete solutions that make our transportation network even stronger</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -165,7 +190,7 @@
             <div class="w-12 h-12 bg-primary-50 text-primary-600 rounded-xl flex items-center justify-center">
               <i class="fas fa-warehouse text-xl"></i>
             </div>
-            <h4 class="font-bold text-slate-900">Warehousing & Distribution</h4>
+            <h4 class="font-bold text-slate-900 font-montserrat">Warehousing & Distribution</h4>
           </div>
           <p class="text-sm text-slate-600">Strategic warehouse network with inventory management and efficient distribution.</p>
         </div>
@@ -174,7 +199,7 @@
             <div class="w-12 h-12 bg-primary-50 text-primary-600 rounded-xl flex items-center justify-center">
               <i class="fas fa-network-wired text-xl"></i>
             </div>
-            <h4 class="font-bold text-slate-900">Supply Chain Solutions</h4>
+            <h4 class="font-bold text-slate-900 font-montserrat">Supply Chain Solutions</h4>
           </div>
           <p class="text-sm text-slate-600">End-to-end visibility, inventory optimization and customized supply chain design.</p>
         </div>
@@ -183,7 +208,7 @@
             <div class="w-12 h-12 bg-primary-50 text-primary-600 rounded-xl flex items-center justify-center">
               <i class="fas fa-file-contract text-xl"></i>
             </div>
-            <h4 class="font-bold text-slate-900">Customs Brokerage</h4>
+            <h4 class="font-bold text-slate-900 font-montserrat">Customs Brokerage</h4>
           </div>
           <p class="text-sm text-slate-600">Expert customs clearance and compliance management in major markets worldwide.</p>
         </div>
@@ -191,104 +216,16 @@
     </div>
   </section>
 
-  <!-- ========== CASE STUDIES ========== -->
-  <section class="py-20 lg:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
-        <div>
-          <p class="text-sm font-semibold text-primary-600 uppercase tracking-wider mb-3">Industry Solutions</p>
-          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Trusted by Leading Brands</h2>
-        </div>
-        <a href="#" class="inline-flex items-center gap-2 text-primary-600 font-semibold hover:gap-3 transition-all">
-          View all case studies <i class="fas fa-arrow-right text-sm"></i>
-        </a>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="group relative overflow-hidden rounded-2xl aspect-[4/5]">
-          <img src="images/case-automotive.jpg" alt="Automotive" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <span class="text-xs font-semibold text-primary-300 uppercase tracking-wider">Automotive</span>
-            <h3 class="text-xl font-bold mt-1 mb-2">Just-in-Time Delivery Network</h3>
-            <p class="text-sm text-slate-300">Reduced inventory costs by 23% for a global OEM.</p>
-          </div>
-        </div>
-        <div class="group relative overflow-hidden rounded-2xl aspect-[4/5]">
-          <img src="images/case-retail.jpg" alt="Retail" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <span class="text-xs font-semibold text-primary-300 uppercase tracking-wider">Retail & E-commerce</span>
-            <h3 class="text-xl font-bold mt-1 mb-2">Omnichannel Fulfillment</h3>
-            <p class="text-sm text-slate-300">Scaled peak season capacity by 4× without disruption.</p>
-          </div>
-        </div>
-        <div class="group relative overflow-hidden rounded-2xl aspect-[4/5]">
-          <img src="images/case-pharma.jpg" alt="Pharma" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <span class="text-xs font-semibold text-primary-300 uppercase tracking-wider">Life Sciences</span>
-            <h3 class="text-xl font-bold mt-1 mb-2">Cold Chain Excellence</h3>
-            <p class="text-sm text-slate-300">GDP-compliant temperature-controlled network across 40 countries.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== NEWS ========== -->
-  <section id="news" class="py-20 lg:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
-        <div>
-          <p class="text-sm font-semibold text-primary-600 uppercase tracking-wider mb-3">News & Insights</p>
-          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Latest from Evertrust</h2>
-        </div>
-        <a href="#" class="inline-flex items-center gap-2 text-primary-600 font-semibold hover:gap-3 transition-all">
-          View all articles <i class="fas fa-arrow-right text-sm"></i>
-        </a>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <article class="group">
-          <div class="aspect-[16/10] rounded-xl overflow-hidden mb-5 bg-slate-100">
-            <img src="images/news-1.jpg" alt="News" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-          </div>
-          <div class="text-xs font-semibold text-primary-600 uppercase tracking-wider mb-2">Company News</div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition">Evertrust expands cold chain capacity in Southeast Asia</h3>
-          <p class="text-slate-600 text-sm mb-3 line-clamp-2">New temperature-controlled facilities in Singapore and Ho Chi Minh City strengthen our regional life-sciences network.</p>
-          <time class="text-xs text-slate-400">July 28, 2026</time>
-        </article>
-        <article class="group">
-          <div class="aspect-[16/10] rounded-xl overflow-hidden mb-5 bg-slate-100">
-            <img src="images/news-2.jpg" alt="News" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-          </div>
-          <div class="text-xs font-semibold text-primary-600 uppercase tracking-wider mb-2">Market Insight</div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition">Ocean freight rates outlook for Q3 2026</h3>
-          <p class="text-slate-600 text-sm mb-3 line-clamp-2">Our analysis of capacity, demand and geopolitical factors shaping the next quarter on major trade lanes.</p>
-          <time class="text-xs text-slate-400">July 15, 2026</time>
-        </article>
-        <article class="group">
-          <div class="aspect-[16/10] rounded-xl overflow-hidden mb-5 bg-slate-100">
-            <img src="images/news-3.jpg" alt="News" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-          </div>
-          <div class="text-xs font-semibold text-primary-600 uppercase tracking-wider mb-2">Sustainability</div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition">Achieving 30% emission reduction on key corridors</h3>
-          <p class="text-slate-600 text-sm mb-3 line-clamp-2">Update on our green shipping program and partnerships with carriers using alternative fuels.</p>
-          <time class="text-xs text-slate-400">June 30, 2026</time>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <!-- ========== CTA BANNER ========== -->
   <section id="quote" class="py-20 bg-primary-900">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to move your cargo?</h2>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4 font-montserrat">Ready to move your cargo?</h2>
       <p class="text-lg text-primary-200 mb-8 max-w-2xl mx-auto">Get a tailored quote within 24 hours. Our specialists at Evertrust are ready to design the optimal solution for your shipment.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#" class="inline-flex items-center justify-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-4 rounded-lg transition shadow-lg">
+        <a href="#" class="inline-flex items-center justify-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-4 rounded-lg transition shadow-lg font-montserrat">
           Request a Quote
         </a>
-        <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg border border-white/30 transition">
+        <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg border border-white/30 transition font-montserrat">
           Contact Sales
         </a>
       </div>
@@ -303,7 +240,7 @@
           <div class="flex items-center gap-2.5 mb-5">
             <img src="logo.png" alt="Evertrust" class="h-12 lg:h-16 w-auto object-contain brightness-0 invert" />
           </div>
-          <p class="text-sm leading-relaxed mb-4 max-w-sm">
+          <p class="company-name text-sm leading-relaxed mb-4 max-w-sm font-semibold">
             Evertrust International Logistics Co., Ltd.
           </p>
           <p class="text-sm leading-relaxed mb-6 max-w-sm">
@@ -317,7 +254,7 @@
           </div>
         </div>
         <div>
-          <h4 class="text-white font-semibold mb-4">Services</h4>
+          <h4 class="text-white font-semibold mb-4 font-montserrat">Services</h4>
           <ul class="space-y-2.5 text-sm">
             <li><a href="#" class="hover:text-white transition">Ocean Freight</a></li>
             <li><a href="#" class="hover:text-white transition">Air Freight</a></li>
@@ -328,16 +265,15 @@
           </ul>
         </div>
         <div>
-          <h4 class="text-white font-semibold mb-4">Company</h4>
+          <h4 class="text-white font-semibold mb-4 font-montserrat">Company</h4>
           <ul class="space-y-2.5 text-sm">
             <li><a href="#" class="hover:text-white transition">About Us</a></li>
             <li><a href="#" class="hover:text-white transition">Careers</a></li>
-            <li><a href="#" class="hover:text-white transition">News & Insights</a></li>
             <li><a href="#" class="hover:text-white transition">Sustainability</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-white font-semibold mb-4">Contact</h4>
+          <h4 class="text-white font-semibold mb-4 font-montserrat">Contact</h4>
           <ul class="space-y-3 text-sm">
             <li class="flex items-start gap-3">
               <i class="fas fa-map-marker-alt mt-1 text-primary-500"></i>
