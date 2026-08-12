@@ -58,23 +58,42 @@
     .hero-bg {
       position: relative;
       width: 100%;
-      aspect-ratio: 16 / 9;
       background-color: #0e1a40;
       overflow: hidden;
+      /* Mobile: enough height to show full text + image */
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+    }
+    @media (min-width: 1024px) {
+      .hero-bg {
+        min-height: 0;
+        aspect-ratio: 16 / 9;
+      }
     }
     .hero-bg img.hero-img {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       object-position: center center;
+    }
+    @media (min-width: 1024px) {
+      .hero-bg img.hero-img {
+        object-fit: contain;
+      }
     }
     .hero-bg .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(14, 26, 64, 0.78) 0%, rgba(32, 62, 150, 0.45) 50%, rgba(32, 62, 150, 0.15) 100%);
+      background: linear-gradient(to bottom, rgba(14, 26, 64, 0.75) 0%, rgba(32, 62, 150, 0.45) 55%, rgba(32, 62, 150, 0.35) 100%);
       z-index: 1;
+    }
+    @media (min-width: 1024px) {
+      .hero-bg .hero-overlay {
+        background: linear-gradient(to right, rgba(14, 26, 64, 0.78) 0%, rgba(32, 62, 150, 0.45) 50%, rgba(32, 62, 150, 0.15) 100%);
+      }
     }
     .hero-bg .hero-content {
       position: relative;
@@ -147,20 +166,20 @@
   </header>
 
   <!-- ========== HERO ========== -->
-  <section class="hero-bg flex items-center pt-20 lg:pt-24">
+  <section class="hero-bg flex items-center pt-24 lg:pt-24">
     <img src="hero-bg.jpg" alt="Evertrust Logistics" class="hero-img" />
     <div class="hero-overlay"></div>
-    <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 lg:py-24">
+    <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 sm:py-16 lg:py-24">
       <div class="max-w-3xl">
         <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur text-white/90 text-sm px-4 py-1.5 rounded-full mb-6 border border-white/20">
           <span class="w-2 h-2 bg-accent-500 rounded-full animate-pulse"></span>
           <span class="company-name" data-i18n="companyName">Evertrust International Logistics Co., Ltd.</span>
         </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-4 sm:mb-6">
           <span data-i18n="heroTitle1">Connecting the World</span><br />
           <span class="text-primary-200" data-i18n="heroTitle2">Efficiently · Reliably · Professionally</span>
         </h1>
-        <p class="text-lg sm:text-xl text-slate-200 mb-10 max-w-2xl leading-relaxed" data-i18n="heroDesc">
+        <p class="text-base sm:text-xl text-slate-200 mb-6 sm:mb-10 max-w-2xl leading-relaxed" data-i18n="heroDesc">
           Evertrust International Logistics Co., Ltd. provides end-to-end ocean, air, rail and road logistics solutions, serving major global trade markets.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
